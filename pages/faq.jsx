@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Link from "next/link";
+import PageTitle from "../src/components/PageTitle";
 
 const FAQ_API_URL =
   "https://gist.githubusercontent.com/omariosouto/0ceab54bdd8182cbd1a4549d32945c1a/raw/578ad1e8e5296fa048e3e7ff6b317f7497b31ad9/alura-cases-faq.json";
@@ -15,9 +15,7 @@ export async function getServerSideProps() {
 export default function FAQPage({ anything, faq }) {
   return (
     <div>
-      <Head>
-        <title>FAQ - Alura Cases Campaign</title>
-      </Head>
+      <PageTitle>FAQ - Alura Cases Campaign</PageTitle>
       <h1>Alura Cases - FAQ</h1>
       <Link href="/">Go to home</Link>
 
